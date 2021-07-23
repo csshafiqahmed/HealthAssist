@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="43dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:srcCompat="@drawable/back_btn" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back_btn"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/bold"
+            android:text="Diet Plans"
+            android:textColor="@color/mybluetext"
+            android:textSize="@dimen/_35ssp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_diets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title"
+            tools:listitem="@layout/listitem_diet_plan"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register_act">
+    tools:context="in.starbow.fitindia.register_act">
 
     <TextView
         android:id="@+id/textView11"

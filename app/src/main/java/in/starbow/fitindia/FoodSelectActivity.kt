@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import androidx.recyclerview.widget.RecyclerView
+import com.starbow.fitindia.model
 import food_adapter
 import kotlinx.android.synthetic.main.food_select.*
 

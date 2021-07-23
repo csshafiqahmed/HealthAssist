@@ -1,7 +1,6 @@
 import `in`.starbow.fitindia.R
-import `in`.starbow.fitindia.model
+import com.starbow.fitindia.model
 import android.content.Context
-import android.view.Display
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

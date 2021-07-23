@@ -1,5 +1,4 @@
 package in.starbow.fitindia.helper;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -8,9 +7,13 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
+
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
+
+import in.starbow.fitindia.model.User;
 
 @SuppressWarnings("unused")
 public final class PrefsHelper {
@@ -547,7 +550,6 @@ public final class PrefsHelper {
 
             PrefsHelper.initPrefs(mContext, mKey, mMode);
         }
-
     }
 
 }

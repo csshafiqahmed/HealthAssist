@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +8,11 @@
     android:orientation="vertical"
     android:scrollbars="none"
     android:background="#03203C"
-    tools:context=".MainActivity">
-
+    tools:context="in.starbow.fitindia.MainActivity">
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -27,8 +29,6 @@
             android:textColor="#EDC126"
             android:textSize="25sp"
             />
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,36 +105,90 @@
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:id="@+id/diets"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/diet_plan" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:text="Diet Plans"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/ate_today"
+                android:layout_weight="1"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/image_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_select"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80sp"
-            android:layout_marginBottom="10sp"
-            android:layout_marginRight="20sp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="@font/thin"
-            android:layout_marginLeft="40sp"
-            android:text="Select what you ate today ?"
+            android:text="Do you want to logout?"
             android:textAlignment="center"
             android:textColor="#EDC126"
-            android:textSize="22sp" />
-
-        <LinearLayout
+            android:textSize="@dimen/_15ssp" />
+        <Button
+            android:id="@+id/btn_logout"
             android:layout_width="match_parent"
-            android:layout_height="358dp"
-            android:layout_marginTop="10sp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/image_selector"
-                android:layout_width="261dp"
-                android:layout_height="215dp"
-                android:layout_marginLeft="20sp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/image_select" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:background="@drawable/loginbutton"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="logout" />
     </LinearLayout>
-
-
 </ScrollView>

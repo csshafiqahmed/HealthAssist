@@ -9,7 +9,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_register_act.*
-import java.util.regex.Pattern
 
 class register_act : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -73,7 +72,7 @@ class register_act : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 Log.d("Email Tag", "Email sent.")
-                                startActivity(Intent(this,loginPage::class.java))
+                                startActivity(Intent(this, loginPage::class.java))
                                 finish()
                             }
                         }

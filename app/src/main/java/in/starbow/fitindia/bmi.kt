@@ -9,7 +9,6 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.slider.Slider
 
 class bmi : AppCompatActivity() {
     lateinit var slider: EditText
