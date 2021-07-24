@@ -73,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/light"
+        android:layout_marginStart="@dimen/_10sdp"
         android:text="Sign Up"
         android:textColor="@color/mypinktext"
         android:textSize="16sp"

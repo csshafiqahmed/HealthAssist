@@ -3,6 +3,7 @@ package `in`.starbow.fitindia.helper
 import `in`.starbow.fitindia.R
 
 import `in`.starbow.fitindia.peodmeter
+import android.annotation.SuppressLint
 
 import android.app.Notification
 import android.app.NotificationManager
@@ -17,6 +18,7 @@ import java.util.*
 
 class GeneralHelper {
     companion object{
+        @SuppressLint("SimpleDateFormat")
         fun getToadyDate(): String{
             val date: Date = Calendar.getInstance().time
             val df: DateFormat = SimpleDateFormat("dd MMM yyyy")
@@ -25,7 +27,7 @@ class GeneralHelper {
 
         fun updateNotification(context: Context, service: Service, step: Int){
             val NOTIFICATION_ID = 7837
-            var notiBuilder: Notification.Builder = Notification.Builder(context)
+//            var notiBuilder: Notification.Builder = Notification.Builder(context)
             var notiManager: NotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             val intent = Intent(context, peodmeter::class.java)
             val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
@@ -33,23 +35,21 @@ class GeneralHelper {
                 .setContentTitle("Step Counter")
                 .setContentText(step.toString())
                 .setTicker(step.toString())
-                .setPriority(NotificationManager.IMPORTANCE_MIN)
+                .setPriority(NotificationManager.IMPORTANCE_DEFAULT)
                 .setCategory(Notification.CATEGORY_SERVICE)
                 .setStyle(NotificationCompat.BigTextStyle().bigText("Step Counter"))
                 .setStyle(NotificationCompat.BigTextStyle().bigText(step.toString()))
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setContentIntent(pendingIntent)
-                .setProgress(500, step, false)
+                .setProgress(1000, step, false)
                 //.setProgress(this.dailyStepGoal, totalSteps, false)
-                .setVisibility(NotificationCompat.VISIBILITY_SECRET)
-                .setPriority(NotificationCompat.PRIORITY_MIN)
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .build();
-
 
             service.startForeground(NOTIFICATION_ID, notification)
             // Set Service to run in the Foreground
             notiManager.notify(NOTIFICATION_ID, notification)
-
         }
 
         fun getCalories(steps: Int): String? {

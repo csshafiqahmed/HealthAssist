@@ -56,7 +56,7 @@ class StepDetectorService : Service(), SensorEventListener {
             if (finalSteps > 0) {
                 PrefsHelper.putInt("FSteps", finalSteps)
                 GeneralHelper.updateNotification(this, this, finalSteps)
-                callback?.subscribeSteps(finalSteps)
+                callback.subscribeSteps(finalSteps)
             }
         }
 
